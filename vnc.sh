@@ -2,14 +2,15 @@
 
 echo -e "Please Enter your listen port num (Defalut 8081): \c"
 read port
-if [[ -z "$port" ]] ; then
+if ! [[ -z "$port" ]] ; then
    port=8081
 fi
 
 if ! [[ "$port" =~ ^[0-9]+$ ]] ; then
-    echo "Sorry integers only"
+    echo "Sorry integers only allowed...!"
 else
 
+echo "Thank you for using Virtual Heart" 
 # vnc tern on sh script....!!!
 gnome-terminal -e x11vnc  &&
 
